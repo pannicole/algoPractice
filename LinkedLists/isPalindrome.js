@@ -61,10 +61,6 @@ function isPalindromePointer(l){
   console.log(true)
   return true
 }
-//recurisvely
-function isPalindromeRecursive(l){
-
-}
 
 let node1 = new Node(2)
 let node2 = new Node(5)
