@@ -23,14 +23,13 @@ function removeDupes(l) {
     if(values[curr.value]){
       prev.next = curr.next
       curr = curr.next
-      //remove
     } else {
       values[curr.value] = 1
       prev = curr
       curr = curr.next
     }
   }
-  console.log(l.head.next)
+  return l
 }
 
 let node1 = new Node(2)
