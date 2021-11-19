@@ -9,11 +9,6 @@ function smallestDifference(one, two) {
 
   // let count = 0
   while( i < one.length || j < two.length){
-    // count++
-    // if(count >20){
-    //   return false
-    // }
-    console.log(one[i], two[j])
     if(one[i] > two[j]){
       if(j < two.length){
         if(difference >= Math.abs(two[j] - one[i])){
@@ -22,13 +17,6 @@ function smallestDifference(one, two) {
         }
         j++
       }
-      // else {
-      //   if(i == one.length - 1){
-      //     return smallest
-      //   }
-      //   i++
-      // }
-
     } else {
       if(i < one.length){
         if(difference >= Math.abs(one[i] - two[j])){
@@ -37,12 +25,6 @@ function smallestDifference(one, two) {
         }
         i++
       }
-      // else {
-      //   if(j == two.length -1) {
-      //     return smallest
-      //   }
-      //   j++
-      // }
     }
   }
   return smallest
