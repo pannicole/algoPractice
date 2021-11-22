@@ -34,10 +34,10 @@ function listOfDepths(node) {
         listNext.next = next
         listNext = next
       }
-      if (queue[i].left != null) {
+      if (queue[i].left) {
         children.push(queue[i].left)
       }
-      if (queue[i].right != null){
+      if (queue[i].right){
         children.push(queue[i].right)
       }
     }
