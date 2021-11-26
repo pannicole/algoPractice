@@ -52,3 +52,4 @@ A.children[0].children[1].addChild("J")
 A.children[2].children[0].addChild("K")
 
 console.log(A.depthFirstSearch([]))
+

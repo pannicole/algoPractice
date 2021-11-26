@@ -8,7 +8,6 @@ function numberOfWaysToTraverseGraph(width, height) {
   for(let i = 0; i < height; i++){
       paths.push(Array(width).fill(0))
   }
-  console.log(paths)
 
   for(let i = 0; i < height; i++){
     for(let j = 0; j < width; j++){
