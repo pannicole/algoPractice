@@ -15,11 +15,13 @@ function levenshteinDistance(str1, str2) {
         arr[i][j] = arr[i-1][j-1]
       }
       else{
-        //str1 is shorter than str 2
         let next = Math.min(arr[i][j-1], arr[i-1][j-1], arr[i-1][j])
         arr[i][j] = next + 1
       }
       arr.push(row)
     }
   }
+  console.log(arr)
 }
+
+console.log(levenshteinDistance('abc', 'yabd'))

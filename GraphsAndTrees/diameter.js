@@ -7,7 +7,7 @@ class Node {
 }
 
 function binaryTreeDiameter(tree) {
-  let check = [tree]
+  let max = 0
   function recurse(tree){
     if(tree === null) {
       return 0
@@ -15,18 +15,14 @@ function binaryTreeDiameter(tree) {
     if(tree.left === null && tree.right === null){
       return 1
     } else {
-      check.push(tree)
-        return 1 + Math.max(recurse(tree.left), recurse(tree.right))
+      let left = recurse(tree.left)
+      let right = recurse(tree.right)
+      max = (max > (left + right) ? max : left + right)
+      return 1 + Math.max(left, right)
     }
   }
-
-  let number = 0
-  while(check.length > 0){
-    let nodeToCheck = check.pop()
-    let nodeToCheckPath = recurse(nodeToCheck.left) + recurse(nodeToCheck.right)
-    number = (nodeToCheckPath > number) ? (nodeToCheckPath) : (number)
-  }
-  return number
+  recurse(tree)
+  return max
 }
 
 
@@ -44,6 +40,6 @@ node1.right = node2
 node3.left = node7
 node3.right = node4
 node7.left = node5
-// node5.left = node6
+node5.left = node6
 
 console.log(binaryTreeDiameter(node1))
