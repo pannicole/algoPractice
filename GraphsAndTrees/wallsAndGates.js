@@ -42,4 +42,7 @@ function canMoveTo(row, col, maxRow, maxCol, arr){
 
 let arr =  [[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1],[2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]]
 
-console.log(wallsAndGates(arr))
+// console.log(wallsAndGates(arr))
+
+let arr2= []
+console.log(arr2.length === 1)
