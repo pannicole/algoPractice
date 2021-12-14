@@ -39,6 +39,7 @@ let list = new LinkedList(node1, null)
 
 reverse(node1)
 console.log(node3)
+
 function reverse(head){
   if(!head || !head.next){
     return head

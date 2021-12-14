@@ -22,4 +22,3 @@ let parameters = [[(x) => divisibleByMe(x, 3), FIZZ], [(x) => divisibleByMe(x, 5
 
 fizzBuzz(20, parameters)
 console.log([123,1].slice(0,2))
-console.log( [].reduce( (a, e) => a+e, 0))
